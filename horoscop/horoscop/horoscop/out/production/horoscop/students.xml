@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<studenti>
+    <student numar_matricol="LM12345">
+        <nume>Szatmari Larisa - Maria</nume>
+        <medie>9.69</medie>
+    </student>
+    <student numar_matricol="LM12342">
+        <nume>Balea Andrei - Petru</nume>
+        <medie>4.20</medie>
+    </student>
+    <student numar_matricol="LM12341">
+        <nume>Vladu Catalin</nume>
+        <medie>8.20</medie>
+    </student>
+    <student numar_matricol="LM01234">
+        <nume>Miclos Eduard-Pavel</nume>
+        <medie>10</medie>
+    </student>
+</studenti>
