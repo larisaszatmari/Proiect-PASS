@@ -64,9 +64,17 @@ public class Main {
                     }
                     System.out.print("Introduceti marca student:");
                     marca = reader.readLine().toUpperCase().trim();
-                    if(h.predictMedie(marca))
-                        System.out.println("Media studentului va creste.\n");
-                    else System.out.println("Media studentului va descreste.\n");
+                    switch (h.predictMedie(marca)) {
+                        case -1:
+                            System.out.println("Nu exista studentul cautat!\n");
+                            break;
+                        case 0:
+                            System.out.println("Media studentului va creste.\n");
+                            break;
+                        case 1:
+                            System.out.println("Media studentului va descreste.\n");
+                            break;
+                    }
                 break;
                 case COUNT_AVG_8:
                     if(h==null) {
@@ -83,23 +91,20 @@ public class Main {
                     }
                     System.out.print("Introduceti marca student:");
                     marca = reader.readLine().toUpperCase().trim();
-                    if(h.predictDay(marca))
-                        System.out.println("Studentul va avea o zi buna.\n");
-                    else System.out.println("Studentul nu va avea o zi buna.\n");
+                    switch (h.predictDay(marca)) {
+                        case -1:
+                            System.out.println("Nu exista studentul cautat!\n");
+                            break;
+                        case 0:
+                            System.out.println("Studentul va avea o zi buna.\n");
+                            break;
+                        case 1:
+                            System.out.println("Studentul nu va avea o zi buna.\n");
+                            break;
+                    }
                 break;
             }
 
         }
-        /*for(Student s: studConn.getAllStudents()) {
-            System.out.println(s);
-            if(studConn.predictMedie(s.getNumar_matricol())) {
-                System.out.println("Media studentului va creste.\n");
-            } else System.out.printf("Media studentului va scadea.\n");
-
-            if(studConn.predictDay(s.getNumar_matricol()))
-                System.out.println("Studentul va avea o zi buna.\n");
-            else System.out.println("Studentul nu va avea o zi buna\n");
-        }
-        System.out.println("Numar de studenti cu media peste 8 care vor avea media mai mica: " + studConn.countOver8());*/
     }
 }

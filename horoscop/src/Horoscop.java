@@ -15,20 +15,22 @@ public class Horoscop {
         }
     }
 
-    public boolean predictMedie(String numar_matricol) {
+    public int predictMedie(String numar_matricol) {
         Student s = studConn.getStudent(numar_matricol);
-        if(s==null) return false;
-        return s.predictMedie();
+        if(s==null) return -1;
+        if(s.predictMedie()) return 1;
+        return 0;
     }
 
     public int countOver8() {
         return studConn.getStudentsAverageOver(8.0f).size();
     }
 
-    public boolean predictDay(String numar_matricol) {
+    public int predictDay(String numar_matricol) {
         Student s = studConn.getStudent(numar_matricol);
-        if(s==null) return false;
-        return s.predictDay();
+        if(s==null) return -1;
+        if(s.predictDay()) return 1;
+        return 0;
     }
 
     public void printStudents() {
